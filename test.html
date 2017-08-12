@@ -19,11 +19,13 @@
 		<img id="city" src="note.obj">
 	</a-assets>
 		<a-sky id="image-360" radius="10" src="#city"></a-sky>
-		<!-- <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box> -->
+		<a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
 		<!-- <a-cylinder position="-1 5.75 -2" radius="0.5" height="1.5" color="#30beda"></a-cylinder> -->
 		<!-- <a-sky color="#ECECEC"></a-sky> -->
 	
-		<a-marker-camera preset='hiro'></a-marker-camera>
+		<!-- <a-marker-camera preset='hiro'></a-markexr-camera> -->
+		<a-marker-camera type='pattern' patternUrl='pattern-marker.patt'></a-marker-camera>
+		<!-- https://medium.com/arjs/how-to-create-your-own-marker-44becbec1105 -->
 	</a-scene>
 
 </body>
@@ -32,20 +34,32 @@
 
 
 <!--
-The main objective is to deploy this to a place that has https so you can test it on your phone.
-Add an obj animation overlay. 
 
-What is included:
-	Aframe inclued 
-	AR included
-	Three.js
+
+aframe is built ontop of three.js
+AR is build ontop of aframe which allows use to agument our world. Aframe also introduces the idea of a marker
 
 Aframe docs for creating all this:
 https://aframe.io/docs/0.6.0/components/obj-model.html
 
 
+Two options:
 
+1. Create the music note as a geometric shape and animate in three.js
+How is this used with aframe instead of pure Three.js, Can we convert it.
+example with birds: https://threejs.org/examples/#webgl_gpgpu_birds
+
+Aframe with markers - https://aframe.io/blog/arjs/
+
+2. Create a 3d music note in blender and animate it in blender as an overlay.
 
 Instead of creating a shape in JS, Overlay a 3d object.
+
+create a music note in three.js
+
+Step 1 - Deploy this code and test it. Does it work with the marker in an augmented world
+https://github.com/mrdoob/three.js/blob/master/examples/webgl_gpgpu_birds.html
+
+add a custom marker
 
 //-->
