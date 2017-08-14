@@ -22,9 +22,11 @@
 
 <!-- place multiple boxes on the canvas -->
 		 <!-- <a-box position="-5 10 2" rotation="0 45 0" color="#4CC3D9"></a-box> -->
-      <a-sphere id="parent" position="-2 1.25 -5" radius="1.25" color="#EF2D5E">
+		 <a-entity id="parent" rotation="45 90 180">
+      <a-sphere id="child-2" position="-2 1.25 -5" radius="1.25" color="#EF2D5E">
       	<a-ring id="child-1" position="-1 1.5 -4" color="teal" radius-inner="1.27" radius-outer="3" color="teal"></a-ring>
       </a-sphere>
+      </a-entity>
      <!--  <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
       <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
       <a-sky color="#ECECEC"></a-sky> -->
