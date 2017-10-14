@@ -13,21 +13,21 @@
 
 </head>
 <body>
-	<a-scene>
+	<a-scene embedded arjs='sourceType: webcam;'>
 		<!--embedded arjs='sourceType: webcam;' -->
 
 	<a-assets>
-    <a-asset-item id="eyes" src="assets/frob.gltf" animation-mixer></a-asset-item>
+    <a-asset-item id="eyes" src="assets/Animations6.gltf"></a-asset-item>
   </a-assets>
 
    <a-entity 
 	   gltf-model="#eyes" 
 	   position="0 -1 -7" 
-	   scale="2.4 2.4 2.4">
+	   scale="2.4 2.4 2.4"
+	   animation-mixer>
 	  </a-entity>
 
 
-		<a-sky color="#6EBAA7"></a-sky>
 		<!-- <a-marker-camera preset='custom' type='pattern' url='assets/frog.patt'></a-marker-camera> -->
 	</a-scene>
 
