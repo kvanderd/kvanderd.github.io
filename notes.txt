@@ -1,0 +1,27 @@
+1. Create setup Ar.js
+2. Test Ar.js custom marker
+3. Import tutorials compoents that were helpful
+4. Finsih Tutorial
+5. Make bubbbles / Import water
+6. Make something animated in blender with a Mesh.
+   Do this:
+		- https://www.youtube.com/watch?v=4sk6RFcORd0&t=77s
+		https://threejs.org/editor/ - might be better
+		Animate with script
+		Particle System
+
+
+
+
+You got this.
+		Create Diamond - in downlaods - diamond-shape-export.blend
+
+		Texture the diamond - https://www.youtube.com/watch?v=iPkdbSR0BxI
+		test daimond .patt file for custom marker
+
+		flip diamond upright
+		Spinning Diamond.
+		Add particle system
+
+		Get frog
+		Add water.

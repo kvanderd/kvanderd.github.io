@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+  <!-- <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script> -->
+ <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+  <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.12.3/dist/aframe-extras.min.js"></script>
+  <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+
+	<!-- <script src="lib/aframe-ar.js" type="text/javascript"></script> -->
+<!-- 	<script src="components/snap.js" type="text/javascript"></script>
+	<script src="components/random-color.js" type="text/javascript"></script> -->
+
+</head>
+<body>
+	<a-scene>
+		<!--embedded arjs='sourceType: webcam;' -->
+
+	<a-assets>
+    <a-asset-item id="eyes" src="assets/frob.gltf" animation-mixer></a-asset-item>
+  </a-assets>
+
+   <a-entity 
+	   gltf-model="#eyes" 
+	   position="0 -1 -7" 
+	   scale="2.4 2.4 2.4">
+	  </a-entity>
+
+
+		<a-sky color="#6EBAA7"></a-sky>
+		<!-- <a-marker-camera preset='custom' type='pattern' url='assets/frog.patt'></a-marker-camera> -->
+	</a-scene>
+
+</body>
+</html>
