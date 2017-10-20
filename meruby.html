@@ -9,7 +9,7 @@
   <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
    <script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
 <script src="components/marker.js" type="text/javascript"></script>
-	<!-- <script src="lib/aframe-ar.js" type="text/javascript"></script> -->
+	<script src="lib/aframe-ar.js" type="text/javascript"></script>
 </head>
 <body>
 
@@ -68,7 +68,7 @@ AFRAME.registerComponent('ground', {
 });
 </script>
 
-	<a-scene diamond >
+	<a-scene diamond embedded arjs>
 	<a-camera position="0 0 5" user-height="0"></a-camera>
 		 
 <!-- this one is the best for large overlay -->
