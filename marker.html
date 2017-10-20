@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <!-- <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script> -->
+ <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+  <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.12.3/dist/aframe-extras.min.js"></script>
+  <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+<script src="components/marker.js" type="text/javascript"></script>
+	<!-- <script src="lib/aframe-ar.js" type="text/javascript"></script> -->
+
+
+</head>
+<body>
+
+	<script>
+AFRAME.registerComponent('mythreejsthing', {
+  schema: {
+    color: {
+      default: '#000'
+    },
+  },
+
+  update: function() {
+    var material = new THREE.MeshBasicMaterial({
+      color: this.data.color,
+      wireframe: true
+    });
+
+    var geometry = new THREE.BoxGeometry(1, 1, 1);
+
+    this.el.setObject3D('mesh', new THREE.Mesh(geometry, material));
+  },
+
+  remove: function() {
+    this.el.removeObject3D('mesh');
+  }
+});
+</script>
+
+	<a-scene diamond >
+	<a-camera position="0 0 5" user-height="0"></a-camera>
+		 
+<!-- this one is the best for large overlay -->
+		 <a-asset-item id="diamond" 
+    src="assets/diamond-shape-top2.gltf"></a-asset-item>
+
+     <a-asset-item id="diamond-shape" 
+    src="assets/glTF2.gltf"></a-asset-item>
+
+  </a-assets>
+
+<a-entity
+  geometry="primitive: plane; width: 4; height: auto"
+  material="color: blue"
+  text="value: This text will be 4 units wide."></a-entity>
+
+
+	   <a-entity 
+			gltf-model="#diamond"
+		   scale="0.5 0.5 0.5"
+		   position="0 -0.5 0"> 
+		   	<a-animation attribute="rotation"
+			   	dur="4000" 
+			   	to="40 360 30"
+		   		repeat="indefinite">
+	   		</a-animation>
+		  </a-entity>
+
+		   <a-entity 
+			gltf-model="#diamond-shape"
+		   scale="0.5 0.5 0.5"
+		   position="1 -0.5 1"
+		   animation-mixer> 
+		   	<a-animation attribute="rotation"
+			   	dur="4000" 
+			   	to="40 360 30"
+		   		repeat="indefinite">
+	   		</a-animation>
+		  </a-entity>
+
+ <a-entity mythreejsthing="color: green;" position="-5 1 -5"> </a-entity>               
+
+	<a-marker-camera preset='custom' type='pattern' url='assets/ruby.patt'></a-marker-camera>
+
+	</a-scene>
+
+
+</body>
+</html>

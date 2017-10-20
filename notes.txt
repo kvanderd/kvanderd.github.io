@@ -25,3 +25,95 @@ You got this.
 
 		Get frog
 		Add water.
+
+
+
+
+1. add square 
+
+2. append square after marker is detected. 
+3. Remove square.
+4. parent and child scene placement. 
+		a. create scene x, y, z
+		b. all objects are children of this.
+			Does this make the placement better or easier?
+
+
+2. Add the particle system after marker is detected. 
+
+
+
+
+Try this
+// https://github.com/jeromeetienne/AR.js/issues/99
+// https://github.com/jeromeetienne/AR.js/blob/master/three.js/examples/markerroot.html
+https://github.com/jeromeetienne/AR.js/blob/2fe61b14844fb339a9e262d3f657dafbb82a4020/three.js/examples/worker_artoolkit/threex-armarkercontrols.js
+// if (markerRoot.visible === true)
+
+
+
+
+
+
+=====
+
+1. attach a object3d to a marker, which will also attach it to a THREE.Group. 
+
+it is called markerRoot in most of my sources
+
+if markerRoot.visible === true
+
+see event markerFound
+https://github.com/jeromeetienne/AR.js/blob/master/three.js/examples/deadreckoning.html
+
+
+1. add the .gltf spiniing diamong 
+2. add the particle system
+
+
+
+
+-----
+
+
+add 10 small spinning diamonds. 
+
+Intention - 
+
+Show Ruby Say Hello World.
+
+Spinning Ruby
+
+Dark bottom
+
+Print statement "Hello World"
+
+
+ruby
+
+What you have:
+
+1. Animated main object (Ruby coming to life)
+
+What you need:
+
+1. Terminal / under the earth
+	A-frame or Three.js turrain
+2. Hello World
+
+
+frog
+
+What you have:
+
+1. Animated main object (Frog Looking and around jumping)
+2. sky background
+3. Water example
+
+What you need:
+
+1. Water
+2. Splash
+3. clouds
+
+

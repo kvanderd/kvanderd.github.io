@@ -6,28 +6,34 @@
  <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
   <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.12.3/dist/aframe-extras.min.js"></script>
   <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
-
-	<script src="lib/aframe-ar.js" type="text/javascript"></script>
+ <script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
+	<!-- <script src="lib/aframe-ar.js" type="text/javascript"></script> -->
 <!-- 	<script src="components/snap.js" type="text/javascript"></script>
 	<script src="components/random-color.js" type="text/javascript"></script> -->
 
 </head>
 <body>
-	<a-scene embedded arjs='sourceType: webcam;'>
+	<a-scene>
+
 
 
 	<a-assets>
-    <a-asset-item id="eyes" src="assets/Animations6.gltf"></a-asset-item>
+    <a-asset-item id="eyes" src="assets/glTF3.gltf"></a-asset-item>
   </a-assets>
 
    <a-entity 
 	   gltf-model="#eyes" 
-	   position="0 -1 -7" 
-	   scale="2.2 2.2 2.2"
+	   position="0 1 -7" 
+	   scale="1.5 1.5 1.5"
 	   animation-mixer>
 	  </a-entity>
 
+		    <a-cylinder radius="1.75" height="2.0" color="#39BB82" position="0 0 -8"></a-cylinder>
 
+		
+			<a-sky src="assets/sky.jpg"></a-sky>
+		   <a-ocean width="50" depth="50" density="150" opacity="1"></a-ocean>
+     
 		<a-marker-camera preset='custom' type='pattern' url='assets/frog.patt'></a-marker-camera>
 	</a-scene>
 

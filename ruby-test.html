@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+  <!-- <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script> -->
+ <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+  <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.12.3/dist/aframe-extras.min.js"></script>
+  <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+
+	<script src="lib/aframe-ar.js" type="text/javascript"></script>
+	<!-- <script src="components/snap.js" type="text/javascript"></script> -->
+	<script src="components/after-marker.js" type="text/javascript"></script>
+
+</head>
+<body>
+	<a-scene embedded arjs>
+
+	<a-assets>
+    <a-asset-item id="diamond" src="assets/diamond-shape-export-withbright-texture3.gltf"></a-asset-item>
+  </a-assets>
+
+
+<!-- 
+	   <a-entity 
+		   gltf-model="#diamond" 
+		   position="-2 -3 0" 
+		   scale="0.5 0.5 0.5">
+		   	<a-animation 
+			   	dur="4000" 
+		   		attribute="rotation" 
+		   		to="0 360 0" 
+		   		repeat="indefinite">
+	   		</a-animation>
+		  </a-entity> -->
+
+			<!-- <a-entity position="0 -1 -15" particle-system="color: #EF0000,#44CC00" particle-system="preset: dust"></a-entity> -->
+
+
+			<a-entity geometry="primitive: box"
+          material="color: white"
+          position="-2 0 -5"
+          color-test></a-entity>
+
+
+<a-marker-camera class="marker" preset='hiro'></a-marker-camera>
+
+	<!-- <a-marker-camera preset='custom' type='pattern' url='assets/ruby.patt'></a-marker-camera> -->
+
+
+
+	</a-scene>
+
+</body>
+</html>
